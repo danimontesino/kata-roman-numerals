@@ -26,4 +26,34 @@ describe("numeralstoRoman", () => {
 
     expect(result).toBe("V")
   })
+
+  it("should return X when 10 is passed", () => {
+    const result = numeralsToRoman(10)
+
+    expect(result).toBe("X")
+  })
+
+  it("should return L when 50 is passed", () => {
+    const result = numeralsToRoman(50)
+
+    expect(result).toBe("L")
+  })
+
+  it("should return C when 100 is passed", () => {
+    const result = numeralsToRoman(100)
+
+    expect(result).toBe("C")
+  })
+
+  it("should return D when 500 is passed", () => {
+    const result = numeralsToRoman(500)
+
+    expect(result).toBe("D")
+  })
+
+  it("should return M when 1000 is passed", () => {
+    const result = numeralsToRoman(1000)
+
+    expect(result).toBe("M")
+  })
 })
