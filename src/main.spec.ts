@@ -1,10 +1,11 @@
 import { describe, it, expect } from "vitest"
-import { myFunction } from "./main.js"
+import { numeralsToRoman } from "./main.js";
 
-describe("Default test", () => {
-  it("should work", () => {
-    const result = myFunction()
 
-    expect(result).toBe(true)
+describe("numeralstoRoman", () => {
+  it("should return I when 1 is passed", () => {
+    const result = numeralsToRoman(1)
+
+    expect(result).toBe("I")
   })
 })
