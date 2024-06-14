@@ -1,4 +1,7 @@
-export function numeralsToRoman(num: number): string {
+function baseCaseConverter(num: number): string {
+  if (num === 1) {
+    return 'I'
+  }
   if (num === 5) {
     return 'V'
   }
@@ -17,6 +20,13 @@ export function numeralsToRoman(num: number): string {
   if (num === 1000) {
     return 'M'
   }
-  const charToRepeat = 'I'
-  return charToRepeat.repeat(num);
+  return 'I'
+}
+
+export function numeralsToRoman(num: number): string {
+  const result = baseCaseConverter(num);
+  if (result === 'I') {
+    return result.repeat(num);
+  }
+  return result;
 }
