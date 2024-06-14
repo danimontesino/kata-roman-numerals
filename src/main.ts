@@ -16,6 +16,7 @@ const romanMap: { [key: number]: string } = {
 
 export function numeralsToRoman(num: number): string {
   if (num === 2) return "II"
+  if (num === 3) return "III"
   const result = romanMap[num] ;
   return result;
 }
