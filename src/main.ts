@@ -15,8 +15,10 @@ const romanMap: { [key: number]: string } = {
 };
 
 export function numeralsToRoman(num: number): string {
-  if (num === 2) return "II"
-  if (num === 3) return "III"
+  if (num < 4) {
+    const chartoRepeat = 'I'
+    return chartoRepeat.repeat(num)
+  }
   const result = romanMap[num] ;
   return result;
 }
