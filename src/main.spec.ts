@@ -56,4 +56,10 @@ describe("numeralstoRoman", () => {
 
     expect(result).toBe("M")
   })
+
+  it ("should return VI when 6 is passed", () => {
+    const result = numeralsToRoman(6)
+
+    expect(result).toBe("VI")
+  })
 })
