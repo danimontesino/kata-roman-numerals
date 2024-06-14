@@ -20,4 +20,10 @@ describe("numeralstoRoman", () => {
 
     expect(result).toBe("III")
   })
+
+  it("should return IV when 4 is passed", () => {
+    const result = numeralsToRoman(4)
+
+    expect(result).toBe("IV")
+  })
 })
