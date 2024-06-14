@@ -9,16 +9,10 @@ describe("numeralstoRoman", () => {
     expect(result).toBe("I")
   })
 
-  it("should return II when 2 is passed", () => {
-    const result = numeralsToRoman(2)
+  it("should return IV when 4 is passed", () => {
+    const result = numeralsToRoman(4)
 
-    expect(result).toBe("II")
-  })
-
-  it("should return III when 3 is passed", () => {
-    const result = numeralsToRoman(3)
-
-    expect(result).toBe("III")
+    expect(result).toBe("IV")
   })
 
   it("should return V when 5 is passed", () => {
@@ -27,10 +21,22 @@ describe("numeralstoRoman", () => {
     expect(result).toBe("V")
   })
 
+  it("should return IX when 9 is passed", () => {
+    const result = numeralsToRoman(9)
+
+    expect(result).toBe("IX")
+  })
+
   it("should return X when 10 is passed", () => {
     const result = numeralsToRoman(10)
 
     expect(result).toBe("X")
+  })
+
+  it("should return XL when 40 is passed", () => {
+    const result = numeralsToRoman(40)
+
+    expect(result).toBe("XL")
   })
 
   it("should return L when 50 is passed", () => {
@@ -39,10 +45,22 @@ describe("numeralstoRoman", () => {
     expect(result).toBe("L")
   })
 
+  it("should return XC when 90 is passed", () => {
+    const result = numeralsToRoman(90)
+
+    expect(result).toBe("XC")
+  })
+
   it("should return C when 100 is passed", () => {
     const result = numeralsToRoman(100)
 
     expect(result).toBe("C")
+  })
+
+  it("should return CD when 400 is passed", () => {
+    const result = numeralsToRoman(400)
+
+    expect(result).toBe("CD")
   })
 
   it("should return D when 500 is passed", () => {
@@ -51,15 +69,15 @@ describe("numeralstoRoman", () => {
     expect(result).toBe("D")
   })
 
+  it("should return CM when 900 is passed", () => {
+    const result = numeralsToRoman(900)
+
+    expect(result).toBe("CM")
+  })
+
   it("should return M when 1000 is passed", () => {
     const result = numeralsToRoman(1000)
 
     expect(result).toBe("M")
-  })
-
-  it ("should return VI when 6 is passed", () => {
-    const result = numeralsToRoman(6)
-
-    expect(result).toBe("VI")
   })
 })

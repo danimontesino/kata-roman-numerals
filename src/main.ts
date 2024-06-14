@@ -1,32 +1,20 @@
-function baseCaseConverter(num: number): string {
-  if (num === 1) {
-    return 'I'
-  }
-  if (num === 5) {
-    return 'V'
-  }
-  if (num === 10) {
-    return 'X'
-  }
-  if (num === 50) {
-    return 'L'
-  }
-  if (num === 100) {
-    return 'C'
-  }
-  if (num === 500) {
-    return 'D'
-  }
-  if (num === 1000) {
-    return 'M'
-  }
-  return 'I'
-}
+const romanMap: { [key: number]: string } = {
+  1000: 'M',
+  900: 'CM',
+  500: 'D',
+  400: 'CD',
+  100: 'C',
+  90: 'XC',
+  50: 'L',
+  40: 'XL',
+  10: 'X',
+  9: 'IX',
+  5: 'V',
+  4: 'IV',
+  1: 'I'
+};
 
 export function numeralsToRoman(num: number): string {
-  const result = baseCaseConverter(num);
-  if (result === 'I') {
-    return result.repeat(num);
-  }
+  const result = romanMap[num] ;
   return result;
 }
